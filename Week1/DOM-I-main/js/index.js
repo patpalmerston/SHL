@@ -42,6 +42,8 @@ const siteContent = {
     },
 };
 
+// Create new Nav Elements
+
 // Nav
 let nav = document.querySelectorAll('nav a');
 for (let i = 0; i < nav.length; i++) {
@@ -49,9 +51,9 @@ for (let i = 0; i < nav.length; i++) {
     nav[i].style.color = 'green';
 }
 
-// Logo
+// Nav Logo
 let logo = document.getElementById('logo-img');
-// Logo IMG
+// Nav Logo IMG
 logo.setAttribute('src', siteContent['nav']['img-src']);
 
 // CTA
@@ -64,3 +66,14 @@ ctaH1.textContent = siteContent['cta']['h1'];
 // CTA Button
 let ctaButton = document.querySelector('cta, cta-text, button');
 ctaButton.textContent = siteContent['cta']['button'];
+
+// Main Content H4
+let mainH4 = document.querySelectorAll('main-content, h4');
+console.log(mainH4);
+mainH4[0].textContent = siteContent['main-content']['features-h4'];
+mainH4[1].textContent = siteContent['main-content']['about-h4'];
+mainH4[2].textContent = siteContent['main-content']['services-h4'];
+mainH4[3].textContent = siteContent['main-content']['product-h4'];
+mainH4[4].textContent = siteContent['main-content']['vision-h4'];
+
+// Main Content paragraph
