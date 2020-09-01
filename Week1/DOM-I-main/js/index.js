@@ -67,8 +67,13 @@ ctaH1.textContent = siteContent['cta']['h1'];
 let ctaButton = document.querySelector('cta, cta-text, button');
 ctaButton.textContent = siteContent['cta']['button'];
 
+// Main Content Image
+let midImg = document.getElementById('middle-img');
+midImg.setAttribute('src', siteContent['main-content']['middle-img-src']);
+console.log('mid', midImg);
+
 // Main Content H4
-let mainH4 = document.querySelectorAll('main-content, h4');
+let mainH4 = document.querySelectorAll('.main-content h4');
 console.log(mainH4);
 mainH4[0].textContent = siteContent['main-content']['features-h4'];
 mainH4[1].textContent = siteContent['main-content']['about-h4'];
@@ -77,3 +82,16 @@ mainH4[3].textContent = siteContent['main-content']['product-h4'];
 mainH4[4].textContent = siteContent['main-content']['vision-h4'];
 
 // Main Content paragraph
+let mainP = document.querySelectorAll('.main-content p');
+mainP[0].textContent = siteContent['main-content']['features-content'];
+mainP[1].textContent = siteContent['main-content']['about-content'];
+mainP[2].textContent = siteContent['main-content']['services-content'];
+mainP[3].textContent = siteContent['main-content']['product-content'];
+mainP[4].textContent = siteContent['main-content']['vision-content'];
+console.log('mainP', mainP);
+
+// contact title
+
+// contact
+
+// footer
