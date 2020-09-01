@@ -44,7 +44,10 @@ const siteContent = {
 
 // Nav
 let nav = document.querySelectorAll('nav a');
-console.log('nav', nav);
+for (let i = 0; i < nav.length; i++) {
+    nav[i].textContent = siteContent['nav'][`nav-item-${i}`];
+    nav[i].style.color = 'green';
+}
 
 // Logo
 let logo = document.getElementById('logo-img');
@@ -61,4 +64,3 @@ ctaH1.textContent = siteContent['cta']['h1'];
 // CTA Button
 let ctaButton = document.querySelector('cta, cta-text, button');
 ctaButton.textContent = siteContent['cta']['button'];
-console.log('ctabutton', ctaButton);
