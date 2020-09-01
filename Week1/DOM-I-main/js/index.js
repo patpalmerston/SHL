@@ -52,14 +52,6 @@ const siteContent = {
     },
 };
 
-// Create new Nav Elements add new items to object
-// siteContent.nav['nav-item-8'] = 'something new';
-// siteContent.nav['nav-item-9'] = 'another new';
-// create new a tag elements
-
-// append and prepend
-// Add new Nav before and after
-
 // Nav
 let nav = document.querySelectorAll('nav a');
 
@@ -73,12 +65,14 @@ for (let i = 0; i < nav.length; i++) {
 let newNav1 = document.createElement('a');
 // create new a tag text node
 let newNav1Text = document.createTextNode('append');
+// style new nav
 newNav1.style.color = 'green';
 
 // create new a tag
 let newNav2 = document.createElement('a');
 // create new a tag text node
 let newNav2Text = document.createTextNode('prepend');
+// style new nav
 newNav2.style.color = 'green';
 
 // grab the nav bar
