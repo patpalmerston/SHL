@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Title from './components/title/Title';
 import Image from './components/image/Image';
 import Description from './components/description/Description';
+import Button from './components/button/Button';
 import './App.css';
 import axios from 'axios';
 
@@ -35,6 +36,7 @@ function App() {
             <Title fetchData={fetchData} />
             <Image fetchData={fetchData} />
             <Description fetchData={fetchData} />
+            <Button />
         </div>
     );
 }
