@@ -17,6 +17,20 @@ const ButtonDiv = styled.button`
         props.type === 'warning' ? `background: #fdd835` : null}
 `;
 
+const NormalButton = styled.button`
+    color: palevioletred;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+`;
+
+const TomatoButton = styled(NormalButton)`
+    color: tomato;
+    border-color: tomato;
+`;
+
 const Button = () => {
     return (
         <div>
@@ -24,6 +38,8 @@ const Button = () => {
             <ButtonDiv type='success'>Success</ButtonDiv>
             <ButtonDiv type='danger'>Danger</ButtonDiv>
             <ButtonDiv type='warning'>Warning</ButtonDiv>
+            <NormalButton>Normal</NormalButton>
+            <TomatoButton>Tomato</TomatoButton>
         </div>
     );
 };
