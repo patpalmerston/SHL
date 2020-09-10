@@ -1,11 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const ImageDiv = styled.img`
+    width: 50%;
+    height: 50%;
+`;
 
 const Image = (props) => {
     if (props.fetchData) {
         return (
-            <div>
-                <img src={props.fetchData.url} alt='nasa' />
-            </div>
+            // <ImageDiv>
+            <ImageDiv src={props.fetchData.url} alt='nasa' />
+            // </ImageDiv>
         );
     }
 };
