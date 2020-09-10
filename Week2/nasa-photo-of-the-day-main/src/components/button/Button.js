@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Popover, PopoverHeader, PopoverBody } from 'reactstrap';
 
 const ButtonDiv = styled.button`
     padding: 6px 10px;
@@ -32,9 +33,28 @@ const TomatoButton = styled(NormalButton)`
 `;
 
 const Button = () => {
+    const [popoverOpen, setPopoverOpen] = useState(false);
+
+    const toggle = () => setPopoverOpen(!popoverOpen);
+
     return (
         <div>
-            <ButtonDiv type='primary'>Primary</ButtonDiv>
+            <ButtonDiv id='Popover1' type='primary'>
+                Primary
+            </ButtonDiv>
+            <Popover
+                placement='bottom'
+                isOpen={popoverOpen}
+                target='Popover1'
+                toggle={toggle}
+            >
+                <PopoverHeader>Lets Make a Popover!!!</PopoverHeader>
+                <PopoverBody>
+                    I really wanted to make a popover so I did it! Yay for me
+                    and all the things in the Universe!
+                </PopoverBody>
+            </Popover>
+
             <ButtonDiv type='success'>Success</ButtonDiv>
             <ButtonDiv type='danger'>Danger</ButtonDiv>
             <ButtonDiv type='warning'>Warning</ButtonDiv>
