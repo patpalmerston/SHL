@@ -3,7 +3,9 @@ import Title from './components/title/Title';
 import Image from './components/image/Image';
 import Description from './components/description/Description';
 import Button from './components/button/Button';
+
 import { Spinner } from 'reactstrap';
+
 import './App.css';
 import axios from 'axios';
 
@@ -31,7 +33,7 @@ function App() {
         }
         getPic();
     }, []);
-
+    // console.log('app.js', fetchData);
     // added spinner if loading
     if (loading) return <Spinner color='danger' />;
     return (

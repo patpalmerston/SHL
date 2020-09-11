@@ -7,6 +7,7 @@ const ImageDiv = styled.img`
 `;
 
 const Image = (props) => {
+    console.log('image', props);
     if (props.fetchData) {
         return (
             // <ImageDiv>
