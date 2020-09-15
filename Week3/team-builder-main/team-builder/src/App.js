@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Form from './components/form/Form';
+import Members from './components/members/Members';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [members, setMembers] = useState([
+        {
+            name: 'Joe Bob',
+            email: 'joe@email.com',
+            role: 'designer',
+        },
+        {
+            name: 'Sarah Lia',
+            email: 'lia@email.com',
+            role: 'coder',
+        },
+        {
+            name: 'Zac Smilt',
+            email: 'zs@email.com',
+            role: 'team lead',
+        },
+    ]);
+
+    // console.log('app.js state', members);
+
+    const handleAdd = () => {
+        console.log('handleAdd');
+    };
+
+    const handleAddSubmit = () => {
+        console.log('handleAddSubmit');
+    };
+
+    return (
+        <div className='App'>
+            <Members members={members} />
+            <Form />
+        </div>
+    );
 }
 
 export default App;
